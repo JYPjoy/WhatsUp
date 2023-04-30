@@ -16,13 +16,12 @@ struct SignUpView: View {
     
     @EnvironmentObject private var model: Model
     
-    
     private var isFormValid: Bool {
         !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && !displayName.isEmptyOrWhiteSpace
     }
-
-    private func signUp() async {
-        do {
+    
+    private func signUp() async{
+        do{
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             try await model.updateDisplayName(for: result.user, displayName: displayName)
         } catch {
@@ -30,32 +29,32 @@ struct SignUpView: View {
         }
     }
     
-    
     var body: some View {
         Form {
             TextField("Email", text: $email)
                 .textInputAutocapitalization(.never)
-            SecureField("Password", text: $password)
+            TextField("Password", text: $password)
                 .textInputAutocapitalization(.never)
             TextField("Display name", text: $displayName)
+                .textInputAutocapitalization(.never)
             
-            HStack {
+            HStack{
                 Spacer()
-                Button("SignUp") {
+                Button("SignUp"){
                     Task {
-                       await signUp()
+                        await signUp()
                     }
                 }.disabled(!isFormValid)
                     .buttonStyle(.borderless)
                 
-                Button("Login") {
-                    // take the user to login screen
+                Button("Login"){
+                    //take the user to login screen
                 }.buttonStyle(.borderless)
                 Spacer()
             }
-            
             Text(errorMessage)
         }
+
     }
 }
 
