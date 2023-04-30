@@ -21,10 +21,31 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WhatsUpApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject private var appState = AppState()
+    @StateObject private var model = Model()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack(path: $appState.routes){
+                ZStack{
+                    if Auth.auth().currentUser != nil {
+                        MainView()
+                    } else {
+                        LoginView()
+                    }
+                }.navigationDestination(for: Route.self) { route in
+                    switch route {
+                    case .main:
+                        MainView()
+                    case .login:
+                        LoginView()
+                    case .signUp:
+                        SignUpView()
+                    }
+                }
+            }
+            .environmentObject(appState)
+            .environmentObject(model)
         }
     }
 }

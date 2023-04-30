@@ -15,6 +15,8 @@ struct SignUpView: View {
     @State private var errorMessage: String = ""
     
     @EnvironmentObject private var model: Model
+    @EnvironmentObject private var appState: AppState
+    //@EnvironmentObject reads a shared object that we placed into the environment. This does not own its data.
     
     private var isFormValid: Bool {
         !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && !displayName.isEmptyOrWhiteSpace
@@ -24,6 +26,7 @@ struct SignUpView: View {
         do{
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             try await model.updateDisplayName(for: result.user, displayName: displayName)
+            appState.routes.append(.login)
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -49,6 +52,7 @@ struct SignUpView: View {
                 
                 Button("Login"){
                     //take the user to login screen
+                    appState.routes.append(.login)
                 }.buttonStyle(.borderless)
                 Spacer()
             }
@@ -61,5 +65,6 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView().environmentObject(Model())
+        LoginView().environmentObject(AppState())
     }
 }
