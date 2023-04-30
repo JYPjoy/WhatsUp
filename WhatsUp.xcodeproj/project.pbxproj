@@ -17,6 +17,10 @@
 		A8C99FE929FE39A30034B799 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A8C99FE829FE39A30034B799 /* FirebaseFirestore */; };
 		A8C99FEB29FE39A30034B799 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A8C99FEA29FE39A30034B799 /* FirebaseFirestoreSwift */; };
 		A8C99FED29FE39A30034B799 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A8C99FEC29FE39A30034B799 /* FirebaseStorage */; };
+		A8C99FF029FE3BC00034B799 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99FEF29FE3BC00034B799 /* SignUpView.swift */; };
+		A8C99FF329FE44A40034B799 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99FF229FE44A40034B799 /* String+Extensions.swift */; };
+		A8C99FF629FE58AA0034B799 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99FF529FE58AA0034B799 /* Model.swift */; };
+		A8C99FF829FE59EB0034B799 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99FF729FE59EB0034B799 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		A854976229FE377E00E16766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A854976529FE377E00E16766 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8C99FE129FE38C60034B799 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A8C99FEF29FE3BC00034B799 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A8C99FF229FE44A40034B799 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		A8C99FF529FE58AA0034B799 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A8C99FF729FE59EB0034B799 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +71,12 @@
 		A854975D29FE377D00E16766 /* WhatsUp */ = {
 			isa = PBXGroup;
 			children = (
-				A8C99FE129FE38C60034B799 /* GoogleService-Info.plist */,
+				A8C99FF429FE588E0034B799 /* Models */,
+				A8C99FF129FE44940034B799 /* Extensions */,
+				A8C99FEE29FE3BAD0034B799 /* Views */,
 				A854975E29FE377D00E16766 /* WhatsUpApp.swift */,
 				A854976029FE377D00E16766 /* ContentView.swift */,
+				A8C99FE129FE38C60034B799 /* GoogleService-Info.plist */,
 				A854976229FE377E00E16766 /* Assets.xcassets */,
 				A854976429FE377E00E16766 /* Preview Content */,
 			);
@@ -78,6 +89,31 @@
 				A854976529FE377E00E16766 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A8C99FEE29FE3BAD0034B799 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8C99FEF29FE3BC00034B799 /* SignUpView.swift */,
+				A8C99FF729FE59EB0034B799 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8C99FF129FE44940034B799 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8C99FF229FE44A40034B799 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8C99FF429FE588E0034B799 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8C99FF529FE58AA0034B799 /* Model.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8C99FF829FE59EB0034B799 /* LoginView.swift in Sources */,
+				A8C99FF629FE58AA0034B799 /* Model.swift in Sources */,
+				A8C99FF329FE44A40034B799 /* String+Extensions.swift in Sources */,
 				A854976129FE377D00E16766 /* ContentView.swift in Sources */,
+				A8C99FF029FE3BC00034B799 /* SignUpView.swift in Sources */,
 				A854975F29FE377D00E16766 /* WhatsUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
