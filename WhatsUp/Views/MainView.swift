@@ -12,7 +12,7 @@ struct MainView: View {
         
         //탭바
         TabView {
-            GroupListcontainerView()
+            GroupListContainerView()
                 .tabItem {
                     Label("Chats", systemImage: "message.fill")
                 }
