@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: 탭바처럼 1칸 1칸
 struct GroupListView: View {
     
     let groups: [Group]
@@ -15,7 +16,7 @@ struct GroupListView: View {
         List(groups) { group in
             
             NavigationLink {
-                Text(group.subject)
+                GroupDetailView(group: group)
             } label: {
                 HStack {
                     Image(systemName: "person.2")

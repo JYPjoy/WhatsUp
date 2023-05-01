@@ -27,6 +27,8 @@
 		A8CC3BDB29FF39B7001BAB6B /* AddNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BDA29FF39B7001BAB6B /* AddNewGroupView.swift */; };
 		A8CC3BDD29FF419C001BAB6B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BDC29FF419C001BAB6B /* Group.swift */; };
 		A8CC3BDF29FF89C2001BAB6B /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BDE29FF89C2001BAB6B /* GroupListView.swift */; };
+		A8CC3BE329FF9C2C001BAB6B /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BE229FF9C2C001BAB6B /* GroupDetailView.swift */; };
+		A8CC3BE529FFA329001BAB6B /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BE429FFA329001BAB6B /* ChatMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		A8CC3BDA29FF39B7001BAB6B /* AddNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupView.swift; sourceTree = "<group>"; };
 		A8CC3BDC29FF419C001BAB6B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		A8CC3BDE29FF89C2001BAB6B /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
+		A8CC3BE229FF9C2C001BAB6B /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		A8CC3BE429FFA329001BAB6B /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +74,10 @@
 				A825334C29FEA684001778AF /* SignUpView.swift */,
 				A825335429FEAEC5001778AF /* LoginView.swift */,
 				A8CC3BD429FEB149001BAB6B /* MainView.swift */,
-				A8CC3BD829FF3832001BAB6B /* GroupListcontainerView.swift */,
 				A8CC3BDA29FF39B7001BAB6B /* AddNewGroupView.swift */,
 				A8CC3BDE29FF89C2001BAB6B /* GroupListView.swift */,
+				A8CC3BD829FF3832001BAB6B /* GroupListcontainerView.swift */,
+				A8CC3BE229FF9C2C001BAB6B /* GroupDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 				A825335229FEAD49001778AF /* Model.swift */,
 				A8CC3BD629FEB361001BAB6B /* AppState.swift */,
 				A8CC3BDC29FF419C001BAB6B /* Group.swift */,
+				A8CC3BE429FFA329001BAB6B /* ChatMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,10 +228,12 @@
 				A825335329FEAD49001778AF /* Model.swift in Sources */,
 				A8CC3BD729FEB361001BAB6B /* AppState.swift in Sources */,
 				A825335029FEA72B001778AF /* String+Extensions.swift in Sources */,
+				A8CC3BE529FFA329001BAB6B /* ChatMessage.swift in Sources */,
 				A854976129FE377D00E16766 /* ContentView.swift in Sources */,
 				A825334D29FEA684001778AF /* SignUpView.swift in Sources */,
 				A8CC3BD929FF3832001BAB6B /* GroupListcontainerView.swift in Sources */,
 				A8CC3BDF29FF89C2001BAB6B /* GroupListView.swift in Sources */,
+				A8CC3BE329FF9C2C001BAB6B /* GroupDetailView.swift in Sources */,
 				A854975F29FE377D00E16766 /* WhatsUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
