@@ -30,6 +30,7 @@
 		A8CC3BE329FF9C2C001BAB6B /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BE229FF9C2C001BAB6B /* GroupDetailView.swift */; };
 		A8CC3BE529FFA329001BAB6B /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BE429FFA329001BAB6B /* ChatMessage.swift */; };
 		A8CC3BE729FFAF81001BAB6B /* ChatMessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BE629FFAF81001BAB6B /* ChatMessageListView.swift */; };
+		A8CC3BE929FFBF90001BAB6B /* ChatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BE829FFBF90001BAB6B /* ChatMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A8CC3BE229FF9C2C001BAB6B /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		A8CC3BE429FFA329001BAB6B /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		A8CC3BE629FFAF81001BAB6B /* ChatMessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageListView.swift; sourceTree = "<group>"; };
+		A8CC3BE829FFBF90001BAB6B /* ChatMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				A8CC3BD829FF3832001BAB6B /* GroupListcontainerView.swift */,
 				A8CC3BE229FF9C2C001BAB6B /* GroupDetailView.swift */,
 				A8CC3BE629FFAF81001BAB6B /* ChatMessageListView.swift */,
+				A8CC3BE829FFBF90001BAB6B /* ChatMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CC3BE929FFBF90001BAB6B /* ChatMessageView.swift in Sources */,
 				A8CC3BDD29FF419C001BAB6B /* Group.swift in Sources */,
 				A8CC3BE729FFAF81001BAB6B /* ChatMessageListView.swift in Sources */,
 				A825335529FEAEC5001778AF /* LoginView.swift in Sources */,
