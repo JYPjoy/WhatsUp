@@ -23,6 +23,8 @@
 		A8C99FED29FE39A30034B799 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A8C99FEC29FE39A30034B799 /* FirebaseStorage */; };
 		A8CC3BD529FEB149001BAB6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BD429FEB149001BAB6B /* MainView.swift */; };
 		A8CC3BD729FEB361001BAB6B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BD629FEB361001BAB6B /* AppState.swift */; };
+		A8CC3BD929FF3832001BAB6B /* GroupListcontainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BD829FF3832001BAB6B /* GroupListcontainerView.swift */; };
+		A8CC3BDB29FF39B7001BAB6B /* AddNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CC3BDA29FF39B7001BAB6B /* AddNewGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		A8C99FE129FE38C60034B799 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8CC3BD429FEB149001BAB6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A8CC3BD629FEB361001BAB6B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A8CC3BD829FF3832001BAB6B /* GroupListcontainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListcontainerView.swift; sourceTree = "<group>"; };
+		A8CC3BDA29FF39B7001BAB6B /* AddNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				A825334C29FEA684001778AF /* SignUpView.swift */,
 				A825335429FEAEC5001778AF /* LoginView.swift */,
 				A8CC3BD429FEB149001BAB6B /* MainView.swift */,
+				A8CC3BD829FF3832001BAB6B /* GroupListcontainerView.swift */,
+				A8CC3BDA29FF39B7001BAB6B /* AddNewGroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,12 +210,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A825335529FEAEC5001778AF /* LoginView.swift in Sources */,
+				A8CC3BDB29FF39B7001BAB6B /* AddNewGroupView.swift in Sources */,
 				A8CC3BD529FEB149001BAB6B /* MainView.swift in Sources */,
 				A825335329FEAD49001778AF /* Model.swift in Sources */,
 				A8CC3BD729FEB361001BAB6B /* AppState.swift in Sources */,
 				A825335029FEA72B001778AF /* String+Extensions.swift in Sources */,
 				A854976129FE377D00E16766 /* ContentView.swift in Sources */,
 				A825334D29FEA684001778AF /* SignUpView.swift in Sources */,
+				A8CC3BD929FF3832001BAB6B /* GroupListcontainerView.swift in Sources */,
 				A854975F29FE377D00E16766 /* WhatsUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

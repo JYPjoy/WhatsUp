@@ -49,3 +49,8 @@ struct WhatsUpApp: App {
         }
     }
 }
+
+/*
+ 
+ @StateObject is used to store new instances of reference type data that conforms to the ObservableObject protocol. This owns its data.
+ */
