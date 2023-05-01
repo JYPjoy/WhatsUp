@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct SignUpView: View {
+    
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var displayName: String = ""
@@ -16,55 +17,54 @@ struct SignUpView: View {
     
     @EnvironmentObject private var model: Model
     @EnvironmentObject private var appState: AppState
-    //@EnvironmentObject reads a shared object that we placed into the environment. This does not own its data.
     
     private var isFormValid: Bool {
         !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && !displayName.isEmptyOrWhiteSpace
     }
     
-    private func signUp() async{
-        do{
+    private func signUp() async {
+        
+        do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             try await model.updateDisplayName(for: result.user, displayName: displayName)
-            appState.routes.append(.login)
         } catch {
             errorMessage = error.localizedDescription
         }
+        
     }
     
     var body: some View {
         Form {
             TextField("Email", text: $email)
                 .textInputAutocapitalization(.never)
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .textInputAutocapitalization(.never)
             TextField("Display name", text: $displayName)
-                .textInputAutocapitalization(.never)
             
-            HStack{
+            HStack {
                 Spacer()
-                Button("SignUp"){
+                Button("SignUp") {
                     Task {
-                        await signUp()
+                       await signUp()
                     }
                 }.disabled(!isFormValid)
                     .buttonStyle(.borderless)
                 
-                Button("Login"){
-                    //take the user to login screen
+                Button("Login") {
                     appState.routes.append(.login)
                 }.buttonStyle(.borderless)
                 Spacer()
             }
+            
             Text(errorMessage)
         }
-
     }
 }
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView().environmentObject(Model())
-        LoginView().environmentObject(AppState())
+        SignUpView()
+            .environmentObject(Model())
+            .environmentObject(AppState())
     }
 }

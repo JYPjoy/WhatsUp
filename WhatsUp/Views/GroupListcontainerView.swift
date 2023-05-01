@@ -26,7 +26,7 @@ struct GroupListContainerView: View {
             Spacer()
         }
       
-        .task { //Adds an asynchronous task to perform before this view appears.
+        .task {
             do {
                 try await model.populateGroups()
             } catch {

@@ -13,6 +13,9 @@ import FirebaseAuth
  기존에 비동기 처리 방식은 DispatchQueue나 completionHandler를 사용하여 처리했지만, 더욱 편하게 비동기 처리할 수 있는 문법
  */
 
+import SwiftUI
+import FirebaseAuth
+
 struct LoginView: View {
     
     @State private var email: String = ""
@@ -24,9 +27,9 @@ struct LoginView: View {
     }
     
     private func login() async {
+        
         do {
             let _ = try await Auth.auth().signIn(withEmail: email, password: password)
-            // go to the main screen
             appState.routes.append(.main)
         } catch {
             print(error.localizedDescription)
@@ -34,21 +37,20 @@ struct LoginView: View {
     }
     
     var body: some View {
-        Form{
+        Form {
             TextField("Email", text: $email)
                 .textInputAutocapitalization(.never)
             SecureField("Password", text: $password)
                 .textInputAutocapitalization(.never)
             HStack {
                 Spacer()
-                Button("Login"){
-                    Task{
+                Button("Login") {
+                    Task {
                         await login()
                     }
                 }.disabled(!isFormValid)
-                
-                Button("SignUp"){
-                    //go to the signUp page
+                    .buttonStyle(.borderless)
+                Button("SignUp") {
                     appState.routes.append(.signUp)
                 }.buttonStyle(.borderless)
                 
@@ -60,6 +62,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(AppState())
+        LoginView()
+            .environmentObject(AppState())
     }
 }

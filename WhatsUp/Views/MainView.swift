@@ -9,10 +9,9 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        
-        //탭바
         TabView {
             GroupListContainerView()
+               
                 .tabItem {
                     Label("Chats", systemImage: "message.fill")
                 }

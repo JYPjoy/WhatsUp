@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import FirebaseAuth
 
 struct GroupDetailView: View {
     
@@ -14,28 +13,14 @@ struct GroupDetailView: View {
     @EnvironmentObject private var model: Model
     @State private var chatText: String = ""
     
-    private func sendMessage() async throws {
-        
-        guard let currentUser = Auth.auth().currentUser else { return }
-        
-        let chatMessage = ChatMessage(text: chatText, uid: currentUser.uid, displayName: currentUser.displayName ?? "Guest")
-        
-        try await model.saveChatMessageToGroup(chatMessage: chatMessage, group: group)
-        
-    }
-    
     var body: some View {
         VStack {
             
             Spacer()
             TextField("Enter chat message", text: $chatText)
             Button("Send") {
-                Task {
-                    do {
-                        try await sendMessage()
-                    } catch {
-                        print(error.localizedDescription)
-                    }
+                model.saveChatMessageToGroup(text: chatText, group: group) { error in
+                    
                 }
             }
         }.padding()
